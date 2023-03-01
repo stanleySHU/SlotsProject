@@ -1,0 +1,35 @@
+{
+  "name": "mygame",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^11.0.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.7.3",
+    "html-webpack-plugin": "^5.5.0",
+    "http-server": "^14.1.1",
+    "mini-css-extract-plugin": "^2.7.2",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.0",
+    "style-loader": "^3.3.1",
+    "ts-loader": "^9.4.2",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "start": "http-server ./game1/dist -c-1",
+    "build": "cross-env mode=development id=game1 webpack build --config ./config/build.js ",
+    "build:prd": "cross-env mode=production id=game1 webpack build --config ./config/build.js"
+  },
+  "dependencies": {
+    "@pixi/react": "^7.0.2",
+    "@reduxjs/toolkit": "^1.9.3",
+    "pixi.js": "^7.2.0-beta",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5"
+  }
+}
